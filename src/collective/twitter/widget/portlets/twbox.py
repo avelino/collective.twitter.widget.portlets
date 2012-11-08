@@ -47,6 +47,9 @@ class ITwitterBoxPortlet(IPortletDataProvider):
             description=_(u"Create new Widget in "
                 u"https://twitter.com/settings/widgets and input ID"))
 
+    twitter = schema.TextLine(title=_(u"Twitter Account"),
+            description=_(u"@twitter"))
+
 
 class Assignment(base.Assignment):
     """Portlet assignment.
@@ -58,10 +61,12 @@ class Assignment(base.Assignment):
     implements(ITwitterBoxPortlet)
 
     data_id = u""
+    twitter = u""
 
-    def __init__(self, data_id=u"",):
+    def __init__(self, data_id=u"", twitter=u""):
 
         self.data_id = data_id
+        self.twitter = twitter
 
 
 class Renderer(base.Renderer):
@@ -76,9 +81,19 @@ class Renderer(base.Renderer):
 
     def getDataId(self):
         """
-        Returns the header for the portlet
+        Returns the data id for the portlet
         """
         return self.data.data_id
+
+    def getUrl(self):
+        """ Returns the url for themplate portlet
+        """
+        return "http://twitter.com/%s" % self.data.twitter
+
+    def getText(self):
+        """ Returns the text for themplate pertlet
+        """
+        return "Tweets by %s" % self.data.twitter
 
 
 class AddForm(base.AddForm):
