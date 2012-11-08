@@ -50,6 +50,13 @@ class Assignment(base.Assignment):
         self.data_id = data_id
         self.twitter = twitter
 
+    @property
+    def title(self):
+        """This property is used to give the title of the portlet in the
+        "manage portlets" screen.
+        """
+        return "Twitter Widget (%s)" % self.data_id
+
 
 class Renderer(base.Renderer):
     """Portlet renderer.
