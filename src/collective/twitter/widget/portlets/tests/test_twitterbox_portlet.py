@@ -27,12 +27,10 @@ class TwitterBoxTest(unittest.TestCase):
             name='collective.twitter.widget.portlets.TwitterBoxPortlet')
 
         self.assertEqual(portlet.addview,
-                         'collective.twitter.widget.portlets\
-                                 .TwitterBoxPortlet')
+                         'collective.twitter.widget.portlets.TwitterBoxPortlet')
 
     def test_portlet_title_registered(self):
         portlet = getUtility(IPortletType,
-                             name='collective.twitter.\
-                                     widget.portlets.TwitterBoxPortlet')
+                             name='collective.twitter.widget.portlets.TwitterBoxPortlet')
 
         self.assertEqual(u"Twitter Widget", portlet.title)
