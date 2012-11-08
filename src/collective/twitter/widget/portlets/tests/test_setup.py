@@ -9,8 +9,8 @@ from plone.registry.interfaces import IRegistry
 
 from zope.component import getUtility
 
-from collective.facebook.portlets.config import PROJECTNAME
-from collective.facebook.portlets.testing import INTEGRATION_TESTING
+from collective.twitter.widget.portlets.config import PROJECTNAME
+from collective.twitter.widget.portlets.testing import INTEGRATION_TESTING
 
 
 class InstallTest(unittest.TestCase):
