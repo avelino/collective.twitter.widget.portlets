@@ -23,9 +23,7 @@ class Fixture(PloneSandboxLayer):
 FIXTURE = Fixture()
 INTEGRATION_TESTING = IntegrationTesting(
     bases=(FIXTURE,),
-    name='collective.twitter.widget.portlets:Integration',
-    )
+    name='collective.twitter.widget.portlets:Integration')
 FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(FIXTURE,),
-    name='collective.twitter.widget.portlets:Functional',
-    )
+    name='collective.twitter.widget.portlets:Functional')

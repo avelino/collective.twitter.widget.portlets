@@ -5,10 +5,6 @@ import unittest2 as unittest
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import setRoles
 
-from plone.registry.interfaces import IRegistry
-
-from zope.component import getUtility
-
 from collective.twitter.widget.portlets.config import PROJECTNAME
 from collective.twitter.widget.portlets.testing import INTEGRATION_TESTING
 
@@ -37,4 +33,3 @@ class UninstallTest(unittest.TestCase):
 
     def test_uninstalled(self):
         self.assertFalse(self.qi.isProductInstalled(PROJECTNAME))
-

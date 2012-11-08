@@ -4,17 +4,9 @@ import unittest2 as unittest
 
 from collective.twitter.widget.portlets.testing import INTEGRATION_TESTING
 
-from zope.component import getUtility, getMultiAdapter
-
 from plone.portlets.interfaces import IPortletType
-from plone.portlets.interfaces import IPortletManager
-from plone.portlets.interfaces import IPortletAssignment
-from plone.portlets.interfaces import IPortletDataProvider
-from plone.portlets.interfaces import IPortletRenderer
 
-from plone.app.portlets.storage import PortletAssignmentMapping
-
-from collective.twitter.widget.portlets import twbox
+from zope.component import getUtility
 
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import setRoles
@@ -35,13 +27,12 @@ class TwitterBoxTest(unittest.TestCase):
             name='collective.twitter.widget.portlets.TwitterBoxPortlet')
 
         self.assertEqual(portlet.addview,
-                          'collective.twitter.widget.portlets'
-                          '.TwitterBoxPortlet')
+                         'collective.twitter.widget.portlets\
+                                 .TwitterBoxPortlet')
 
     def test_portlet_title_registered(self):
-         portlet = getUtility(
-                 IPortletType,
-                 name='collective.twitter.widget.portlets.TwitterBoxPortlet')
+        portlet = getUtility(IPortletType,
+                             name='collective.twitter.\
+                                     widget.portlets.TwitterBoxPortlet')
 
-         self.assertEqual(u"Twitter Widget", portlet.title)
-
+        self.assertEqual(u"Twitter Widget", portlet.title)
