@@ -7,7 +7,7 @@ https://twitter.com/settings/widgets
 Screenshot
 ----------
 
-.. image:: docs/_img/Screen Shot 2012-11-09 at 9.52.39 AM.png
+.. image:: https://raw.github.com/avelino/collective.twitter.widget.portlets/master/docs/_img/Screen%20Shot%202012-11-09%20at%209.52.39%20AM.png
 
 
 Mostly Harmless
