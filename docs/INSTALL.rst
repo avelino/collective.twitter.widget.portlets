@@ -1,5 +1,5 @@
-collective.twitter.widget.portlets
-==================================
+Install
+-------
 
  * When you're reading this you have probably already run
    ``easy_install collective.twitter.widget.portlets``. Find out how to install setuptools
